@@ -12,25 +12,25 @@ makeCacheMatrix <- function(x = matrix()) {
   
   inversed_m <- NULL
   
-  ## function adds input matrix into cache and resets its inversed matrix
+  ## function adds input matrix into cache and resets its inversed matrix  
   set <- function(y){
-    x <<- y
-    inversed_m <<- NULL
+      x <<- y
+      inversed_m <<- NULL
   }
   
   ## funtion returns input matrix
   get <- function(){
-    x
+      x
   }
   
   ## function returns the inversed version of current matrix from cache
   get_inversed_m <- function(){
-    inversed_m
+      inversed_m
   }
   
   ## function adds the inversed version of current matrix into cache
   set_inversed_m <- function(m){
-    inversed_m <<-m
+      inversed_m <<-m
   }
   
   list(set = set, get = get, get_inversed_m = 
@@ -49,8 +49,8 @@ cacheSolve <- function(x, ...) {
   
   ## Check if inverse actually computed before
   if(!is.null(output)){
-    message("Found cached data")
-    return(output)
+      message("Found cached data")
+      return(output)
   }
   
   data <- x$get()
